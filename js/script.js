@@ -27,7 +27,11 @@ function cargar_redes(redes, elemento = document.getElementById("lista_redes")){
     //recorre la lista de redes y los imprime en el html
     //puede recibir un elemento al cual se insertará o puede tener por defecto la lista de redes
     for (red of redes){
-        elemento.innerHTML += `<li><a href=${red.link}> <img src=${red.imagen}/> </a></li>`;
+        elemento.innerHTML += `<li class="item_redes">
+                                    <a href=${red.link} target="_blank" > 
+                                        <img src=${red.imagen} alt=${red.nombreRed} title=${red.nombreRed}>  
+                                    </a>
+                                </li>`;
     }
 }
 
@@ -40,7 +44,7 @@ window.addEventListener('load', function () {
         {"nombreCurso" : "Introducción al paradigma de objetos", "entidad" : "EducaciónIT", "anio": "2023"},]
 
     let redes = [
-        {"nombreRed" : "GMAIL", "link" : false, "imagen" : "img/iconos/gmail.png"},
+        {"nombreRed" : "GMAIL", "link" : "mailto:diaz.matiash@gmail.com", "imagen" : "img/iconos/gmail.png"},
         {"nombreRed" : "LinkedIn", "link" : "https://www.linkedin.com/in/matias-h-diaz-98a89123b/", "imagen" : "img/iconos/linkedin.png"},
         {"nombreRed" : "Github", "link" : "https://github.com/MatiasHernanDiaz", "imagen" : "img/iconos/github.png"},
         {"nombreRed" : "Discord", "link" : false, "imagen" : "img/iconos/discord.png"}]

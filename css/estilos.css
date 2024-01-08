@@ -37,9 +37,9 @@ ul {
     list-style: none;
 }
 
-/*PRESENTACION*/    
+/*PRESENTACION*/
 
-.sec_presentacion{
+.sec_presentacion {
     background-color: #f2edcc;
     padding: 10%;
     margin: 1%;
@@ -50,12 +50,12 @@ ul {
     align-items: center;
 }
 
-.titulo{
+.titulo {
     font-size: 200%;
     margin: 1%;
 }
 
-.pcs{
+.pcs {
     margin: auto;
     display: block;
     width: 80%;
@@ -63,19 +63,19 @@ ul {
 
 /*SOBREMI*/
 
-.contenedor_sobre_mi{
+.contenedor_sobre_mi {
     border-bottom-right-radius: 20px;
     border-bottom-left-radius: 20px;
     border-bottom: 10px solid #f2edcc;
     width: 100%;
-    height: auto;   
+    height: auto;
 }
 
 
-.sec_sobre_mi{
+.sec_sobre_mi {
     margin: 10%;
     margin-top: 5%;
-    background-color:  #f2edcc;
+    background-color: #f2edcc;
     border: 20px solid #a09c7c;
     display: flex;
     flex-direction: column;
@@ -84,14 +84,14 @@ ul {
     padding: 5%;
 }
 
-.texto_comun{
+.texto_comun {
     font-size: 150%;
     word-wrap: break-word;
     height: auto;
     width: 100%;
 }
 
-#foto_matias{
+#foto_matias {
     border-radius: 50%;
     border: 10px solid #7d9e7e;
     margin: 3%;
@@ -103,10 +103,10 @@ ul {
 /*HERRAMIENTAS*/
 
 
-.sec_herramientas{
+.sec_herramientas {
     background-color: #f2edcc;
     border-radius: 25px;
-    padding: 5%;    
+    padding: 5%;
 }
 
 .contenedor_elem_seccion {
@@ -118,22 +118,22 @@ ul {
     height: 100%;
 }
 
-.contenedor_elem_herramienta{
+.contenedor_elem_herramienta {
     background-color: #131413;
 
 }
 
-.titulo_seccion{
+.titulo_seccion {
     color: #c6c3b3;
 }
 
-.contenedor_buscador{
+.contenedor_buscador {
     height: 100%;
     width: 100%;
-    
+
 }
 
-.buscador_herramientas{
+.buscador_herramientas {
     background-color: #8ba38b;
     border-radius: 15px;
     height: 8%;
@@ -144,14 +144,14 @@ ul {
 
 /*INPUT DEL BUSCADOR HERRAMIENTA*/
 
-.input_herramienta{
+.input_herramienta {
     background-color: #8ba38b;
     border-radius: 15px;
-    
+
     width: 50%;
 }
 
-#id_buscador_herramientas{
+#id_buscador_herramientas {
     height: 80%;
     width: 100%;
     margin-top: 4px;
@@ -160,14 +160,14 @@ ul {
     font-size: 1.5em;
 }
 
-#checking_resultado_herramienta{
+#checking_resultado_herramienta {
     margin-top: 7px;
     margin-left: 20%;
 }
 
 /*------FIN INPUT DEL BUSCADOR HERRAMIENTA-------*/
 
-.texto_resultado{
+.texto_resultado {
     background-color: #f7fcf7;
     height: auto;
     width: 100%;
@@ -181,40 +181,51 @@ ul {
 
 /*EDUCACION*/
 
-.sec_educacion{
+.sec_educacion {
     background-color: #131413;
     border-radius: 25px;
-    padding: 5%;    
+    padding: 5%;
 }
 
-.contenedor_elem_educacion{
+.contenedor_elem_educacion {
     background-color: #6c8b6c;
 }
 
 /*CONTACTO*/
-.sec_contacto{
+.sec_contacto {
     background-color: #2d302d;
     height: auto;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
 }
 
-.contenedor_links{
+.contenedor_links {
     font-size: 1.5em;
-    margin-top: 2%;
 }
 
-a:link, a:visited, a:active {
+a:link,
+a:visited,
+a:active {
     text-decoration: none;
     color: #1e95f7;
 }
 
-.contenedor_descarga{
+.contenedor_descarga {
     font-size: 2em;
     color: brown;
     border: 3px salmon solid;
     border-radius: 50px;
     width: 20%;
     margin-left: auto;
-    margin-top: 3%;
+}
+
+#lista_redes {
+    list-style-type: none;
+}
+
+.item_redes {
+    float: left;
+    margin: 10px;
+    margin-left: 10px;
+
 }
