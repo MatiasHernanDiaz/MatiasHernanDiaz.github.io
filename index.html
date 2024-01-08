@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/css/estilos.css">
+    <script type="text/javascript" src="/js/script.js"></script>
+    <title>Matias H. Diaz</title>
+</head>
+
+<body>
+
+    <nav>
+        <div></div>
+    </nav>
+
+    <main>
+
+        <section id="sec_presentacion" class="sec_presentacion">
+            <div class="titulo">
+                <h1 id="hola"></h1>
+            </div>
+            <div>
+                <!--imagen de las computadoras-->
+                <img id="imagen_pcs" src="/img/pcs.png" class="pcs" alt="imagen ilustrada de computadoras">
+            </div>
+        </section>
+
+        <div class="contenedor_sobre_mi">
+            <section id="sec_sobre_mi" class="sec_sobre_mi">
+                <div class="titulo titulo_sobre_mi">
+                    <h2>SOBRE MI</h2>
+                </div>
+
+                <div>
+                    <!--imagen de matias-->
+                    <img id="foto_matias" src="/img/img_diaz_matias_hernan.jpg" alt="foto de Matias H. Diaz">
+                </div>
+
+                <div class="texto_comun">
+                    <p>Soy padre, esposo y técnico en telecomunicaciones recibido en la UTN.</p>
+                    <p>Hace tres años comencé a estudiar a programar como hobby y hoy me encuentro en el ultimo año
+                        de la carrerar de programación en informatica en la UNSAM. </p>
+                </div>
+            </section>
+        </div>
+        <section id="sec_herramientas" class="sec_herramientas">
+            <!--
+                aca va una array con la herramienta/tecnología, logo de la tecnología, imagen del proyecto, una descripción
+                en js se hará una lista con filtro
+            -->
+            <div class="contenedor_elem_seccion contenedor_elem_herramienta">
+                <div class="titulo_seccion titulo">
+                    <h2>HERRAMIENTAS</h2>
+                </div>
+                <div class="contenedor_buscador">
+
+                    <div class="buscador_herramientas">
+
+                        <div class="input_herramienta">
+                            <input id="id_buscador_herramientas" type="text" placeholder="Lenguaje - tecnología - proyecto" />
+                        </div>
+                        
+                        <div id="checking_resultado_herramienta">
+                            <p>Exito</p>
+                        </div>
+                    
+                    </div>
+
+
+                    <div class="texto_resultado">
+                        <p>
+                            Lipsum dolor, sit amet consectetur adipisicing elit. Nam quisquam totam quis, corrupti dolor
+                        fdsdfsdfsdfsd
+                        </p>
+                    </div>
+                
+                </div>
+            </div>
+        </section>
+
+        <section id="educacion" class="sec_educacion">
+            <!--
+                array con nombre institucion, titulo, fecha, img
+            -->
+            <div class="contenedor_elem_seccion contenedor_elem_educacion">
+                <div class="titulo_seccion titulo">
+                    <h2>EDUCACION</h2>
+                </div>
+                <div class="texto_resultado">
+                    <ul id="lista_curso">
+                    <!--se cargan los cursos de manera dinamica con array de objetos-->
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <section id="contacto" class="sec_contacto">
+            <!--    
+            nombre, mail, github, linkedin
+        -->
+            <div class="titulo_seccion titulo">
+                <h2>CONTACTO</h2>
+            </div>
+            <div class="contenedor_links">
+                <ul>
+                    <li  class="link"><a href="mailto:diaz.matiash@gmial.com">diaz.matiash@gmial.com</a></li>
+                    <li  class="link"><a href="https://www.linkedin.com/in/matias-h-diaz-98a89123b/">Linkedin</a></li>
+                    <li  class="link"><a href="https://github.com/MatiasHernanDiaz">Github</a></li>
+                </ul>
+            </div>
+            <div class="contenedor_descarga">
+                <p class="descarga">DESCARGAR CV</p>
+            </div>
+        </section>
+    </footer>
+
+</body>
+
+</html>
