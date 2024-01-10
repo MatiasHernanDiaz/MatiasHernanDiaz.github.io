@@ -196,7 +196,8 @@ ul {
     background-color: #2d302d;
     height: auto;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 .contenedor_links {
@@ -210,22 +211,42 @@ a:active {
     color: #1e95f7;
 }
 
-.contenedor_descarga {
-    font-size: 2em;
-    color: brown;
-    border: 3px salmon solid;
-    border-radius: 50px;
-    width: 20%;
-    margin-left: auto;
-}
-
 #lista_redes {
     list-style-type: none;
+    display: flex;
+    flex-direction: column;
 }
 
-.item_redes {
-    float: left;
-    margin: 10px;
-    margin-left: 10px;
+.contenedor_descarga{
+    align-self: flex-end;
+}
 
+.item_redes{
+    display: flex;
+    flex-direction: row;
+}
+
+.img_redes{
+    border: 3px solid #8ba38b;
+    border-radius: 5px;
+    margin: 2px;
+}
+
+.noLink{
+    margin-left: 10px;
+    margin-top: 10px;
+    color: #8ba38b;
+}
+
+.titulo_contacto{
+    align-self:center;
+    color: #8ba38b;
+}
+
+.img_descarga{
+    max-width: 8%;
+}
+
+.descarga{
+    
 }

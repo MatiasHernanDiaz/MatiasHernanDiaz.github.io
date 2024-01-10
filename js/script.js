@@ -33,8 +33,9 @@ function cargar_redes(redes, elemento = document.getElementById("lista_redes")){
     for (red of redes){
         elemento.innerHTML += `<li class="item_redes">
                                     <a href=${red.link} target="_blank" > 
-                                        <img src=${red.imagen} alt=${red.nombreRed} title=${red.nombreRed}>  
-                                    </a>
+                                        <img class="img_redes" src=${red.imagen} alt=${red.nombreRed} title=${red.nombreRed}>
+                                        </a>
+                                        <p class="noLink">${red.noLink}</p> 
                                 </li>`;
     }
 }
@@ -66,10 +67,10 @@ window.addEventListener('load', function () {
         {'nombreCurso' : 'Introducción al paradigma de objetos', 'entidad' : 'EducaciónIT', 'anio': '2023'},]
 
     const redes = [
-        {'nombreRed' : 'GMAIL', 'link' : 'mailto:diaz.matiash@gmail.com', 'imagen' : 'img/iconos/gmail.png'},
-        {'nombreRed' : 'LinkedIn', 'link' : 'https://www.linkedin.com/in/matias-h-diaz-98a89123b/', 'imagen' : 'img/iconos/linkedin.png'},
-        {'nombreRed' : 'Github', 'link' : 'https://github.com/MatiasHernanDiaz', 'imagen' : 'img/iconos/github.png'},
-        {'nombreRed' : 'Discord', 'link' : false, 'imagen' : 'img/iconos/discord.png'}]
+        {'nombreRed' : 'GMAIL', 'link' : 'mailto:diaz.matiash@gmail.com', 'imagen' : 'img/iconos/gmail.png', 'noLink' : 'diaz.matiash@gmail.com'},
+        {'nombreRed' : 'LinkedIn', 'link' : 'https://www.linkedin.com/in/matias-h-diaz-98a89123b/', 'imagen' : 'img/iconos/linkedin.png', 'noLink': 'Matias Hernan Diaz'},
+        {'nombreRed' : 'Github', 'link' : 'https://github.com/MatiasHernanDiaz', 'imagen' : 'img/iconos/github.png', 'noLink' : 'MatiasHernanDiaz'},
+        {'nombreRed' : 'Discord', 'link' : false, 'imagen' : 'img/iconos/discord.png', 'noLink' : 'matiashdiaz'}]
     
     const herramientas = [
         {'python' : ['proyecto 1', 'proyecto 2'], 'link' : 'www.google.com'},
