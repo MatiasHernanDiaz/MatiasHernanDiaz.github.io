@@ -11,8 +11,18 @@
 
 <body>
 
-    <nav>
-        <div></div>
+    <nav class="navegador">
+        <div class='dropdown'>
+            <div class='title pointerCursor'>Seleccione una opción <i class="fa fa-angle-right"></i></div>
+            
+            <div class='menu pointerCursor hide'>
+                <div class='option' id='option1'><a href="#sec_sobremi">Sobre Mi</a></div>
+                <div class='option' id='option2'><a href="#sec_herramientas">Herramientas</a></div>
+                <div class='option' id='option3'><a href="#sec_educacion">Educacion</a></div>
+                <div class='option' id='option4'><a href="#sec_contacto">Contacto</a></div>
+            </div>
+    
+        </div>
     </nav>
 
     <main>
@@ -27,7 +37,7 @@
             </div>
         </section>
 
-        <div class="contenedor_sobre_mi">
+        <div id="sec_sobremi" class="contenedor_sobre_mi">
             <section id="sec_sobre_mi" class="sec_sobre_mi">
                 <div class="titulo titulo_sobre_mi">
                     <h2>SOBRE MI</h2>
@@ -80,7 +90,7 @@
             </div>
         </section>
 
-        <section id="educacion" class="sec_educacion">
+        <section id="sec_educacion" class="sec_educacion">
             <!--
                 array con nombre institucion, titulo, fecha, img
             -->
@@ -99,7 +109,7 @@
     </main>
 
     <footer>
-        <section id="contacto" class="sec_contacto">
+        <section id="sec_contacto" class="sec_contacto">
             <div class="titulo_contacto titulo">
                 <h2>Contacto</h2>
             </div>

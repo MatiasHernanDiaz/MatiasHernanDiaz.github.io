@@ -58,6 +58,39 @@ function filtro_busqueda(lista, barraBusqueda = document.getElementById("id_busc
     
 }
 
+
+function toggleClass(elem,className){
+	if (elem.className.indexOf(className) !== -1){
+		elem.className = elem.className.replace(className,'');
+	}
+	else{
+		elem.className = elem.className.replace(/\s+/g,' ') + 	' ' + className;
+	}
+	
+	return elem;
+}
+
+function toggleDisplay(elem){
+	const curDisplayStyle = elem.style.display;			
+				
+	if (curDisplayStyle === 'none' || curDisplayStyle === ''){
+		elem.style.display = 'block';
+	}
+	else{
+		elem.style.display = 'none';
+	}
+}
+
+
+function toggleMenuDisplay(e){
+	const dropdown = e.currentTarget.parentNode;
+	const menu = dropdown.querySelector('.menu');
+	const icon = dropdown.querySelector('.fa-angle-right');
+
+	toggleClass(menu,'hide');
+	toggleClass(icon,'rotate-90');
+}
+
 window.addEventListener('load', function () {
     
     const estudios = [
@@ -82,7 +115,15 @@ window.addEventListener('load', function () {
 
     cargar_redes(redes);
 
-    filtro_busqueda(herramientas, document.getElementById("id_busqueda_herramientas"));
+    //filtro_busqueda(herramientas, document.getElementById("id_busqueda_herramientas"));
+
+    //obtiene elementos
+    const dropdownTitle = document.querySelector('.dropdown .title');
+    const dropdownOptions = document.querySelectorAll('.dropdown .option');
+
+    //vincula listeners a estos elementos
+    dropdownTitle.addEventListener('click', toggleMenuDisplay);
+
 
 });
 

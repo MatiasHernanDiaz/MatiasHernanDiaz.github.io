@@ -37,6 +37,68 @@ ul {
     list-style: none;
 }
 
+
+/*MENU NAVEGACION*/
+
+.navegador{
+    display: flex;
+    justify-content: end;
+}
+
+.hide {
+    max-height: 0 !important;
+}
+
+.dropdown{
+    position: fixed;
+	border: 0.1em solid #000000;
+	width: 10em;
+	margin-bottom: 1em;
+    background-color: #323530;
+    color: #6c8b6c;
+}
+
+.dropdown .title{
+	margin: .3em .3em .3em .3em;	
+	width: 100%;
+}
+
+.dropdown .title .fa-angle-right{
+	float: right;
+	margin-right: .7em;
+	transition: transform .3s;
+}
+
+.dropdown .menu{
+	transition: max-height .5s ease-out;
+	max-height: 20em;
+	overflow: hidden;
+}
+
+.dropdown .menu .option{
+	margin: .3em .3em .3em .3em;
+	margin-top: 0.3em;
+}
+
+.dropdown .menu .option:hover{
+	background: rgba(0,0,0,0.2);
+}
+
+.pointerCursor:hover{
+	cursor: pointer;
+}
+
+.rotate-90{
+	transform: rotate(90deg);
+}
+
+a:link,
+a:visited,
+a:active {
+    text-decoration: none;
+    color: #6c8b6c;
+}
+
 /*PRESENTACION*/
 
 .sec_presentacion {
@@ -204,12 +266,7 @@ ul {
     font-size: 1.5em;
 }
 
-a:link,
-a:visited,
-a:active {
-    text-decoration: none;
-    color: #1e95f7;
-}
+
 
 #lista_redes {
     list-style-type: none;
