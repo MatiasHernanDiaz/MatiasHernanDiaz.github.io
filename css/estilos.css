@@ -42,7 +42,7 @@ ul {
 
 .navegador{
     display: flex;
-    justify-content: end;
+    justify-content: start;
 }
 
 .hide {
@@ -51,11 +51,12 @@ ul {
 
 .dropdown{
     position: fixed;
-	border: 0.1em solid #000000;
-	width: 10em;
+	border: 1px solid #000000;
+	width: 5%;
 	margin-bottom: 1em;
     background-color: #323530;
-    color: #6c8b6c;
+    color: #98b298;
+    margin: 1%;
 }
 
 .dropdown .title{
@@ -98,6 +99,35 @@ a:active {
     text-decoration: none;
     color: #6c8b6c;
 }
+
+/*DISEÑO DE RALLAS DE MENU*/
+
+.rayas{
+    height: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.r1{
+    background-color: #6c8b6c;
+    margin: 2px;
+    border: 2px solid #6c8b6c;
+    width: 80%;
+}
+.r2{
+    background-color: #6c8b6c;
+    margin: 2px;
+    border: 2px solid #6c8b6c;
+    width: 80%;
+}
+.r3{
+    background-color: #6c8b6c;
+    margin: 2px;
+    border: 2px solid #6c8b6c;
+    width: 80%;
+}
+
 
 /*PRESENTACION*/
 

@@ -81,12 +81,30 @@ function toggleDisplay(elem){
 	}
 }
 
+function invertirFlex(elemento){
+    if(elemento.style.flexDirection === 'row'){
+        elemento.style.flexDirection = 'column';
+    }
+    else{
+        elemento.style.flexDirection = 'row';
+    }
+}
 
 function toggleMenuDisplay(e){
 	const dropdown = e.currentTarget.parentNode;
 	const menu = dropdown.querySelector('.menu');
 	const icon = dropdown.querySelector('.fa-angle-right');
+    const rayas = document.getElementById('rayas');
 
+    if(dropdown.style.width === "auto"){
+        dropdown.style.width = "5%";
+        invertirFlex(rayas);
+    }
+    else{
+        dropdown.style.width = "auto";
+        invertirFlex(rayas);
+    }
+    
 	toggleClass(menu,'hide');
 	toggleClass(icon,'rotate-90');
 }
