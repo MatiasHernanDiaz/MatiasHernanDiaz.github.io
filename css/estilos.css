@@ -57,6 +57,7 @@ ul {
     background-color: #323530;
     color: #98b298;
     margin: 1%;
+    border-radius: 5px;
 }
 
 .dropdown .title{
@@ -71,7 +72,7 @@ ul {
 }
 
 .dropdown .menu{
-	transition: max-height .5s ease-out;
+	transition: max-height .1s ease-out;
 	max-height: 20em;
 	overflow: hidden;
 }
@@ -106,7 +107,9 @@ a:active {
     height: 20px;
     display: flex;
     flex-direction: column;
+    
     justify-content: space-around;
+    
 }
 
 .r1{
@@ -114,19 +117,24 @@ a:active {
     margin: 2px;
     border: 2px solid #6c8b6c;
     width: 80%;
+    border-radius: 5px;
 }
+/*
 .r2{
     background-color: #6c8b6c;
     margin: 2px;
     border: 2px solid #6c8b6c;
     width: 80%;
+    border-radius: 5px;
 }
 .r3{
     background-color: #6c8b6c;
     margin: 2px;
     border: 2px solid #6c8b6c;
     width: 80%;
+    border-radius: 5px;
 }
+*/
 
 
 /*PRESENTACION*/
