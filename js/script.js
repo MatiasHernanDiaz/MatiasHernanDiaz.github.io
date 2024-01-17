@@ -32,31 +32,13 @@ function cargar_redes(redes, elemento = document.getElementById("lista_redes")){
     //puede recibir un elemento al cual se insertará o puede tener por defecto la lista de redes
     for (red of redes){
         elemento.innerHTML += `<li class="item_redes">
-                                    <a href=${red.link} target="_blank" > 
+                                    <a href=${red.link ? red.link: '#sec_contacto'} target="_blank" > 
                                         <img class="img_redes" src=${red.imagen} alt=${red.nombreRed} title=${red.nombreRed}>
-                                        </a>
-                                        <p class="noLink">${red.noLink}</p> 
+                                    </a>
                                 </li>`;
     }
 }
 
-function filtro_busqueda(lista, barraBusqueda = document.getElementById("id_buscador_herramientas")){
-
-    //TRABAJAR EN LA BARRA DE BUSQUEDA 
-    
-    let resultado = document.getElementById('resultado');
-    let busqueda = barraBusqueda.value;
-    
-    for(tecnologia of [...lista]){
-        let claves = Object.keys(tecnologia);
-        for(clave in claves){
-            if(clave.includes(busqueda)){
-                resultado.innerHTML += clave;
-            }
-        }
-    }
-    
-}
 
 
 function toggleClass(elem,className){
@@ -97,7 +79,7 @@ function toggleMenuDisplay(e){
     const rayas = document.getElementById('rayas');
 
     if(dropdown.style.width === "auto"){
-        dropdown.style.width = "5%";
+        dropdown.style.width = "50px";
         invertirFlex(rayas);
     }
     else{
@@ -108,6 +90,52 @@ function toggleMenuDisplay(e){
 	toggleClass(menu,'hide');
 	toggleClass(icon,'rotate-90');
 }
+
+/*
+function cargar_herramientas(herramientas){
+    pizarra = document.getElementById('lista_resultado');
+    
+    alert( herramientas[0].lenguaje);
+    for(const herramienta of herramientas){
+        pizarra.innerHTML += `<li class='items_resultado'> ${herramienta.lenguaje}</li>`
+    }
+}
+*/
+
+
+function buscar(event){
+    let pizarra = document.getElementById('lista_resultado');
+    let input = event.currentTarget;
+    let cantidad = document.getElementById('checking_resultado_herramienta');
+    valor = input.value.toLowerCase();
+    let contador = 0;
+
+    const herramientas = [
+        {'lenguaje' : 'python', 'proyecto' : [1, 2]},
+        {'lenguaje' : 'javascript', 'proyecto' : [3, 4]},
+        {'lenguaje' : 'HTML', 'proyecto' : [3, 4]},
+        {'lenguaje' : 'CSS', 'proyecto' : [3, 4]},
+        {'lenguaje' : 'java', 'proyecto' : [3, 4]},
+        {'lenguaje' : 'C', 'proyecto' : [3, 4]},
+        {'lenguaje' : 'C++', 'proyecto' : [3, 4]}]
+
+    
+    for(const herramienta of herramientas){
+        if(herramienta.lenguaje.toLowerCase().includes(valor) && (valor !== '')){
+             contador++;
+             pizarra.innerHTML += `<li class='lista_herramienta'>${herramienta.lenguaje}</li>`
+
+        }
+        else{
+            //pizarra.innerHTML = ``;
+        }
+
+     
+    }
+    cantidad.innerHTML = `${contador}`;
+
+}
+
 
 window.addEventListener('load', function () {
     
@@ -124,8 +152,14 @@ window.addEventListener('load', function () {
         {'nombreRed' : 'Discord', 'link' : false, 'imagen' : 'img/iconos/discord.png', 'noLink' : 'matiashdiaz'}]
     
     const herramientas = [
-        {'python' : ['proyecto 1', 'proyecto 2'], 'link' : 'www.google.com'},
-        {'JavaScrip' : ['procto js 1', 'proyecto js 2'], 'link' : 'www.facebook.com'}]
+        {'lenguaje':'python', 'proyecto' : [1, 2]},
+        {'lenguaje':'javascript', 'proyecto' : [3, 4]},
+        {'lenguaje':'HTML', 'proyecto' : [3, 4]},
+        {'lenguaje': 'CSS', 'proyecto' : [3, 4]},
+        {'lenguaje': 'java', 'proyecto' : [3, 4]},
+        {'lenguaje': 'C', 'proyecto' : [3, 4]},
+        {'lenguaje': 'C++', 'proyecto' : [3, 4]}]
+
 
     tipear("¡Hola! Soy MATIAS H. DIAZ", 200);
     
@@ -133,15 +167,21 @@ window.addEventListener('load', function () {
 
     cargar_redes(redes);
 
-    //filtro_busqueda(herramientas, document.getElementById("id_busqueda_herramientas"));
+    //cargar_herramientas(herramientas);
 
     //obtiene elementos
     const dropdownTitle = document.querySelector('.dropdown .title');
     const dropdownOptions = document.querySelectorAll('.dropdown .option');
+    const buscador = document.getElementById('id_buscador_herramientas');
 
     //vincula listeners a estos elementos
     dropdownTitle.addEventListener('click', toggleMenuDisplay);
+    
+    //buscador
+    buscador.addEventListener('keyup', buscar);
+    
 
+    
 
 });
 
