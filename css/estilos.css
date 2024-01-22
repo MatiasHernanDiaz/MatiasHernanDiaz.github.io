@@ -215,10 +215,38 @@ a:active {
     background-color: #8ba38b;
     border-radius: 15px;
     height: 8%;
-    margin-bottom: 3%;
     display: flex;
     flex-direction: row;
 }
+
+
+.item_lista {
+    /*display: none;*/
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    
+}
+
+.logo{
+    width: 100px;
+}
+
+.tecnologia{
+    display: flex;
+    justify-content: start;
+    
+}
+
+.contenedor_filtro{
+    color: #daf0da;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 10px;
+    width: 100%;
+}
+
 
 /*INPUT DEL BUSCADOR HERRAMIENTA*/
 
@@ -229,7 +257,7 @@ a:active {
     width: 50%;
 }
 
-#id_buscador_herramientas {
+#buscador {
     height: 80%;
     width: 100%;
     margin-top: 4px;
