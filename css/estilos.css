@@ -221,10 +221,11 @@ a:active {
 
 
 .item_lista {
-    /*display: none;*/
-    display: flex;
+    display: none;
+    /*display: flex;*/
     flex-wrap: wrap;
     flex-direction: column;
+    margin-bottom: 20px;
     
 }
 
@@ -233,9 +234,31 @@ a:active {
 }
 
 .tecnologia{
-    display: flex;
-    justify-content: start;
     
+}
+
+.contenedor_img{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 10%;
+    
+}
+
+.img_proyecto{
+    margin: 2%;
+    width: 80%;
+    object-fit: contain;
+}
+
+.separador{
+    width: 100%;
+    height: 100px;
+    margin-top: 15px;
+}
+
+.lenguaje{
+    font-size: 1.5em;
 }
 
 .contenedor_filtro{

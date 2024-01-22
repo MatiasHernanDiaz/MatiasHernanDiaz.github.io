@@ -168,15 +168,31 @@ function toggleMenuDisplay(e) {
 function cargarHerramientas(lista, elemento) {
     for (const herramienta of lista) {
         elemento.innerHTML += `<li class='item_lista'>
-                                    <div class="tecnologia"> <img class="logo" src=${herramienta.logo}> </div>
-                                    <div class="tecnologia"> ${herramienta.lenguaje} </div> 
+                                    <div class="logo_tec"> <img class="logo" src=${herramienta.logo}> </div>
+                                    <div class="lenguaje"> ${herramienta.lenguaje} </div> 
                                     <div> ${herramienta.tecnologia}</div>
                                     <div> <p>${herramienta.resumen}</p> </div>
-                                    <div> <a hrf=${herramienta.proyecto}> link </a> </div>
-                                    <div>  </div>
+                                    <div> ${ herramienta.proyecto ? `<a href= ${herramienta.proyecto} target="_blank"> link </a>` : ''} </div>
+                                    <div> ${cargarImagenes(herramienta.imagenes)}</div>
+                                    <div> <img src="img/varios/separador.png" class="separador"> <div>
                                 </li>`
     };
 };
+
+
+function cargarImagenes(listaImg){
+    //restorna con comillas magicas un texto HTML con las imagenes
+    let imagenes = '';
+    if(listaImg){
+        for(const img of listaImg){
+                imagenes += `<div class="contenedor_img">
+                                <img class="img_proyecto" src=${img}>
+                            </div>`
+        }
+    }
+    return imagenes
+}
+
 
 function subFiltro(listaHerramientas, valor, total, orden) {
     //recorre la lista de herramientas
@@ -270,10 +286,11 @@ window.addEventListener('load', function () {
         { 'nombreRed': 'Discord', 'link': false, 'imagen': 'img/iconos/discord.png', 'noLink': 'matiashdiaz' }]
 
     const herramientas = [
-        { 'lenguaje': 'Python', 'tecnologia': 'Vanilla', 'proyecto': ['https://github.com/MatiasHernanDiaz/Analisis_de_datos_Walmark-csv'], 'resumen':['Analisis de datos de Walmark'], 'imagenes': [['/img/proyectos/img_proyecto_python_analisis.png']], 'logo' : '/img/iconos/python.png' },
-        { 'lenguaje': 'Javascript', 'tecnologia': 'Vanilla', 'proyecto': ['5', '6'], 'resumen' : ['HTML, CSS, JS, eventos'], 'imagenes':[['falta_imagen']], 'logo' : '/img/iconos/js_html_css.png'},
-        { 'lenguaje': 'C', 'tecnologia': 'Vanilla', 'proyecto': ['https://github.com/MatiasHernanDiaz/CRUD-ANSI-C'], 'resumen' : [['CRUD de corredores']], 'imagenes' : [['falta_imagen']], 'logo' : '/img/iconos/logo_c.png' },
-        { 'lenguaje': 'Assembly', 'tecnologia': 'Vanilla', 'proyecto': ['https://github.com/MatiasHernanDiaz/game-x'], 'resumen' : [['Juego']], 'imagenes' : [['falta_imagen']], 'logo' : '/img/iconos/logo_ASM.png'}];
+        { 'lenguaje': 'Python', 'tecnologia': 'Vanilla', 'proyecto': 'https://github.com/MatiasHernanDiaz/Analisis_de_datos_Walmark-csv', 'resumen':'Analisis de datos de Walmark', 'imagenes': ['/img/proyectos/img_proyecto_python_analisis.png'], 'logo' : '/img/iconos/python.png' },
+        { 'lenguaje': 'Javascript', 'tecnologia': 'Vanilla', 'proyecto': false, 'resumen' : 'Web CV implementacion de HTML, CSS y JS', 'imagenes':false, 'logo' : '/img/iconos/js_html_css.png'},
+        { 'lenguaje': 'C', 'tecnologia': 'Vanilla', 'proyecto': 'https://github.com/MatiasHernanDiaz/CRUD-ANSI-C', 'resumen' : 'CRUD de corredores', 'imagenes' : ['/img/proyectos/c_1.jpg','/img/proyectos/c_2.jpg','/img/proyectos/c_3.jpg'], 'logo' : '/img/iconos/logo_c.png' },
+        { 'lenguaje': 'Assembly', 'tecnologia': 'Vanilla', 'proyecto': 'https://github.com/MatiasHernanDiaz/game-x', 'resumen' : 'Juego', 'imagenes' : ['/img/proyectos/assembly_1.jpg','/img/proyectos/assembly_2.jpg'], 'logo' : '/img/iconos/logo_ASM.png'},
+        { 'lenguaje': 'Wollok', 'tecnologia': 'Framework Java', 'proyecto': 'https://github.com/MatiasHernanDiaz/TuboAlgo', 'resumen' : 'Juego POO', 'imagenes' : ['/img/proyectos/wollok_0.png','/img/proyectos/wollok_1.png','/img/proyectos/wollok_2.png','/img/proyectos/wollok_3.png'], 'logo' : '/img/iconos/logo_wollok.png'}];
 
 
     const elem = document.getElementById('hola');
@@ -304,7 +321,6 @@ window.addEventListener('load', function () {
     const input = document.getElementById('buscador');
     const listaHerramientas = document.getElementsByClassName('item_lista');
     const radioTodos = document.getElementById('todos');
-
 
     cargarHerramientas(herramientas, elemento);
 
