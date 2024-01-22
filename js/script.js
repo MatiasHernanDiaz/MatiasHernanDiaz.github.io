@@ -223,6 +223,7 @@ function filtro(event, listaHerramientas) {
     //y la imprime en una lista.
     const elemento = event.currentTarget;
     const radios = document.querySelectorAll('input[name="tipo_busqueda"]');
+    const cantidad = document.querySelector('#checking_resultado_herramienta');
     let valor = elemento.value;
     let total = 0;
     valor = valor.toLowerCase();
@@ -249,7 +250,7 @@ function filtro(event, listaHerramientas) {
             }
         }
     }
-    console.log(total);
+    cantidad.textContent = `Resultados: ${total}`;
 };
 
 function todos(event) {
