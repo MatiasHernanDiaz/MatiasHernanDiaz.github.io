@@ -297,7 +297,7 @@ window.addEventListener('load', function () {
     const elem = document.getElementById('hola');
     const elemProfesiones = document.getElementById('profesion');
     const presentacion = '¡Hola! Soy Matias H. Diaz'
-    const profesion = ['Tec en Telecomunicaciones', 'Desarrollador'];
+    const profesion = ['Telecomunicaciones', 'Desarrollador'];
     const tiempoTipeo = 150;
     const dropdownTitle = document.querySelector('.dropdown .title');
     const dropdownOptions = document.querySelectorAll('.dropdown .option');
