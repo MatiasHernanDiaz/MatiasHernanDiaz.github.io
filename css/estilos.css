@@ -223,13 +223,15 @@ a:active {
     flex-direction: row;
 }
 
+#lista_herramientas{
+    padding-left: 10px;
+}
 
 .item_lista {
     display: none;
     flex-wrap: wrap;
     flex-direction: column;
     margin-bottom: 20px;
-
 }
 
 .logo {
