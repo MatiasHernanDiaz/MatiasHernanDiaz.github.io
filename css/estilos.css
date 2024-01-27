@@ -487,6 +487,10 @@ a:active {
         height: 40%;
     }
 
+    #contenedor_imagen_pcs{
+        display: none;
+    }    
+
     /*SOBREMI*/
 
     .titulo_sobre_mi {
@@ -508,10 +512,27 @@ a:active {
         height: auto;
     }
 
+    .buscador_herramientas{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
     /*INPUT DEL BUSCADOR HERRAMIENTA*/
 
     #buscador {
         font-size: 0.7em;
+    }
+
+    .input_herramienta{
+        width: 90%;
+        height: 35px;
+        margin-top: 5px;
+    }
+
+    #checking_resultado_herramienta{
+        margin-left: 0;
+        margin-bottom: 5px;
     }
 
     /*EDUCACION*/
