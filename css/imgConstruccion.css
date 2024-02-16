@@ -1,0 +1,17 @@
+.contenedorConstrucion{
+    position: absolute;
+}
+
+.imgConstruccion{
+    width: 90%;
+}
+
+.botonCerrar{
+    background-color: black;
+    color: white;
+    float: right;
+}
+
+.cerrar{
+    display: none;
+}

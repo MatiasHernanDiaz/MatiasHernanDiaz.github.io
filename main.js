@@ -4,13 +4,45 @@ import { cargar_redes } from "./modulos/contacto.js";
 import { toggleMenuDisplay } from "./modulos/navegador.js";
 import { cargarHerramientas, filtro } from "./modulos/herramientas.js";
 
+
+
 window.addEventListener('load', function () {
+
+    ////////////////////////////////////////////////////////////////////////////////////////
+    //COD A BORRAR CUANDO SE TERMINE PAG
+
+    const seccion = this.document.querySelector('#sec_presentacion');
+    const contenedorConstruccion = this.document.createElement('div');
+    const imgConstruccion = this.document.createElement('img');
+    const botonCerrar = this.document.createElement('button');
+
+    contenedorConstruccion.className = 'contenedorConstrucion';
+    imgConstruccion.src = './img/varios/pag_construccion.png';
+    imgConstruccion.className = 'imgConstruccion';
+
+    botonCerrar.textContent = 'X';
+    botonCerrar.className = 'botonCerrar';
+    contenedorConstruccion.appendChild(imgConstruccion);
+    contenedorConstruccion.appendChild(botonCerrar);
+
+    
+    botonCerrar.addEventListener('click', () =>{
+        contenedorConstruccion.classList.add('cerrar');
+    })
+
+
+    /////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+    seccion.appendChild(contenedorConstruccion);
 
     const estudios = [
         { 'nombreCurso': 'Introducción a Base de Datos y SQL', 'entidad': 'EducaciónIT', 'anio': '2023' },
         { 'nombreCurso': 'Introducción a Java', 'entidad': 'EducaciónIT', 'anio': '2023' },
         { 'nombreCurso': 'Desarrollo Web con HTML', 'entidad': 'EducaciónIT', 'anio': '2023' },
-        { 'nombreCurso': 'Introducción al paradigma de objetos', 'entidad': 'EducaciónIT', 'anio': '2023' },]
+        { 'nombreCurso': 'Introducción al paradigma de objetos', 'entidad': 'EducaciónIT', 'anio': '2023' },
+        { 'nombreCurso': 'Javascript desde cero', 'entidad': 'EducaciónIT', 'anio': '2024' }]
 
     const redes = [
         { 'nombreRed': 'GMAIL', 'link': 'mailto:diaz.matiash@gmail.com', 'imagen': 'img/iconos/gmail.png', 'noLink': 'diaz.matiash@gmail.com' },
